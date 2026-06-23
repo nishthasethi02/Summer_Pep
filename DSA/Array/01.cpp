@@ -23,3 +23,30 @@ int main() {
     return 0;
 }
 
+// Two Pointers
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 6};
+    int n = 5;
+    int target = 5;
+    int l = 0;
+    int r = n - 1;
+    
+    while(l < r){
+        int sum = arr[l] + arr[r];
+        if (sum == target){
+            cout << arr[l] << "+" << arr[r];
+            break;
+        }
+        else if (sum > target){
+            r--;
+        }
+        else{
+            l++;
+        }
+    }
+    return 0;
+}
