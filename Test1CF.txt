@@ -1,0 +1,511 @@
+Que 1.
+A. Lucky Numbers
+time limit per test1 second
+memory limit per test256 megabytes
+Olympus City recently launched the production of personal starships. Now everyone on Mars can buy one and fly to other planets inexpensively.
+
+Each starship has a number —some positive integer x
+. Let's define the luckiness of a number x
+ as the difference between the largest and smallest digits of that number. For example, 142857
+ has 8
+ as its largest digit and 1
+ as its smallest digit, so its luckiness is 8−1=7
+. And the number 111
+ has all digits equal to 1
+, so its luckiness is zero.
+
+Hateehc is a famous Martian blogger who often flies to different corners of the solar system. To release interesting videos even faster, he decided to buy himself a starship. When he came to the store, he saw starships with numbers from l
+ to r
+ inclusively. While in the store, Hateehc wanted to find a starship with the luckiest number.
+
+Since there are a lot of starships in the store, and Hateehc can't program, you have to help the blogger and write a program that answers his question.
+
+
+Input
+The first line contains an integer t
+ (1≤t≤10000
+) —the number of test cases.
+
+Each of the following t
+ lines contains a description of the test case. The description consists of two integers l
+ and r
+ (1≤l≤r≤106
+) — the largest and smallest numbers of the starships in the store.
+
+Output
+Print t
+ lines, one line for each test case, containing the luckiest starship number in the store.
+
+If there are several ways to choose the luckiest number, output any of them.
+
+Example
+InputCopy
+5
+59 63
+42 49
+15 15
+53 57
+1 100
+OutputCopy
+60
+49
+15
+57
+90
+Note
+Let's look at two test examples:
+
+the luckiness of the number 59
+ is 9−5=4
+;
+the luckiness of 60
+ equals 6−0=6
+;
+the luckiness of 61
+ equals 6−1=5
+;
+the luckiness of 62
+ equals 6−2=4
+;
+the luckiness of 63
+ is 6−3=3
+.
+Thus, the luckiest number is 60
+.
+In the fifth test example, the luckiest number is 90
+.
+
+
+Que 2.
+B. Distinct Split
+time limit per test2 seconds
+memory limit per test256 megabytes
+Let's denote the f(x)
+ function for a string x
+ as the number of distinct characters that the string contains. For example f(abc)=3
+, f(bbbbb)=1
+, and f(babacaba)=3
+.
+
+Given a string s
+, split it into two non-empty strings a
+ and b
+ such that f(a)+f(b)
+ is the maximum possible. In other words, find the maximum possible value of f(a)+f(b)
+ such that a+b=s
+ (the concatenation of string a
+ and string b
+ is equal to string s
+).
+
+Input
+The input consists of multiple test cases. The first line contains an integer t
+ (1≤t≤104
+) — the number of test cases. The description of the test cases follows.
+
+The first line of each test case contains an integer n
+ (2≤n≤2⋅105
+) — the length of the string s
+.
+
+The second line contains the string s
+, consisting of lowercase English letters.
+
+It is guaranteed that the sum of n
+ over all test cases does not exceed 2⋅105
+.
+
+Output
+For each test case, output a single integer  — the maximum possible value of f(a)+f(b)
+ such that a+b=s
+.
+
+Example
+InputCopy
+5
+2
+aa
+7
+abcabcd
+5
+aaaaa
+10
+paiumoment
+4
+aazz
+OutputCopy
+2
+7
+2
+10
+3
+Note
+For the first test case, there is only one valid way to split aa
+ into two non-empty strings a
+ and a
+, and f(a)+f(a)=1+1=2
+.
+
+For the second test case, by splitting abcabcd
+ into abc
+ and abcd
+ we can get the answer of f(abc)+f(abcd)=3+4=7
+ which is maximum possible.
+
+For the third test case, it doesn't matter how we split the string, the answer will always be 2
+.
+
+Que 3.
+C. Equalize
+time limit per test1 second
+memory limit per test256 megabytes
+Vasya has two hobbies — adding permutations†
+ to arrays and finding the most frequently occurring element. Recently, he found an array a
+ and decided to find out the maximum number of elements equal to the same number in the array a
+ that he can obtain after adding some permutation to the array a
+.
+
+More formally, Vasya must choose exactly one permutation p1,p2,p3,…,pn
+ of length n
+, and then change the elements of the array a
+ according to the rule ai:=ai+pi
+. After that, Vasya counts how many times each number occurs in the array a
+ and takes the maximum of these values. You need to determine the maximum value he can obtain.
+
+†
+A permutation of length n
+ is an array consisting of n
+ distinct integers from 1
+ to n
+ in arbitrary order. For example, [2,3,1,5,4]
+ is a permutation, but [1,2,2]
+ is not a permutation (2
+ appears twice in the array), and [1,3,4]
+ is also not a permutation (n=3
+ but there is 4
+ in the array).
+
+Input
+Each test consists of multiple test cases. The first line contains a single integer t
+ (1≤t≤2⋅104
+) — the number of test cases. Then follows the description of the test cases.
+
+The first line of each test case contains a single integer n
+ (1≤n≤2⋅105
+) — the length of the array a
+.
+
+The second line of each test case contains n
+ integers a1,a2,…,an
+ (1≤ai≤109
+) — the elements of the array a
+.
+
+It is guaranteed that the sum of n
+ over all test cases does not exceed 2⋅105
+.
+
+Output
+For each test case, output a single number — the maximum number of elements equal to the same number after the operation of adding a permutation.
+
+Example
+InputCopy
+7
+2
+1 2
+4
+7 1 4 1
+3
+103 102 104
+5
+1 101 1 100 1
+5
+1 10 100 1000 1
+2
+3 1
+3
+1000000000 999999997 999999999
+OutputCopy
+2
+2
+3
+2
+1
+1
+2
+Note
+In the first test case, it is optimal to choose p=[2,1]
+. Then after applying the operation, the array a
+ will be [3,3]
+, in which the number 3
+ occurs twice, so the answer is 2
+.
+
+In the second test case, one of the optimal options is p=[2,3,1,4]
+. After applying the operation, the array a
+ will be [9,4,5,5]
+. Since the number 5
+ occurs twice, the answer is 2
+.
+
+
+Que 4.
+D. Rudolf and the Another Competition
+time limit per test1 second
+memory limit per test256 megabytes
+Rudolf has registered for a programming competition that will follow the rules of ICPC. The rules imply that for each solved problem, a participant gets 1
+ point, and also incurs a penalty equal to the number of minutes passed from the beginning of the competition to the moment of solving the problem. In the final table, the participant with the most points is ranked higher, and in case of a tie in points, the participant with the lower penalty is ranked higher.
+
+In total, n
+ participants have registered for the competition. Rudolf is a participant with index 1
+. It is known that m
+ problems will be proposed. And the competition will last h
+ minutes.
+
+A powerful artificial intelligence has predicted the values ti,j
+, which represent the number of minutes it will take for the i
+-th participant to solve the j
+-th problem.
+
+Rudolf realized that the order of solving problems will affect the final result. For example, if h=120
+, and the times to solve problems are [20,15,110
+], then if Rudolf solves the problems in the order:
+
+3,1,2
+, then he will only solve the third problem and get 1
+ point and 110
+ penalty.
+1,2,3
+, then he will solve the first problem after 20
+ minutes from the start, the second one after 20+15=35
+ minutes, and he will not have time to solve the third one. Thus, he will get 2
+ points and 20+35=55
+ penalty.
+2,1,3
+, then he will solve the second problem after 15
+ minutes from the start, the first one after 15+20=35
+ minutes, and he will not have time to solve the third one. Thus, he will get 2
+ points and 15+35=50
+ penalty.
+Rudolf became interested in what place he will take in the competition if each participant solves problems in the optimal order based on the predictions of the artificial intelligence. It will be assumed that in case of a tie in points and penalty, Rudolf will take the best place.
+
+Input
+The first line contains an integer t
+ (1≤t≤103
+) — the number of test cases.
+
+Then follow the descriptions of the test cases.
+
+The first line of each test case contains three integers n,m,h
+ (1≤n⋅m≤2⋅105,1≤h≤106
+) — the number of participants, the number of problems, and the duration of the competition, respectively.
+
+Then there are n
+ lines, each containing m
+ integers ti,j
+ (1≤ti,j≤106
+) — the number of minutes it will take for the i
+-th participant to solve the j
+-th problem.
+
+The sum of n⋅m
+ over all test cases does not exceed 2⋅105
+.
+
+Output
+For each test case, output an integer — Rudolf's place in the final table if all participants solve problems in the optimal order.
+
+Example
+InputCopy
+5
+3 3 120
+20 15 110
+90 90 100
+40 40 40
+2 1 120
+30
+30
+1 3 120
+10 20 30
+3 2 27
+8 9
+10 7
+10 8
+3 3 15
+7 2 6
+7 5 4
+1 9 8
+OutputCopy
+2
+1
+1
+2
+1
+Note
+In the first example, Rudolf will get 2
+ points and 50
+ penalty minutes. The second participant will solve only one problem and get 1
+ point and 90
+ penalty minutes. And the third participant will solve all 3
+ problems and get 3
+ points and 240
+ penalty minutes. Thus, Rudolf will take the second place.
+
+In the second example, both participants will get 1
+ point and 30
+ penalty minutes. In case of a tie in points, Rudolf gets the better position, so he will take the first place.
+
+In the third example, Rudolf is the only participant, so he will take the first place.
+
+In the fourth example, all participants can solve two problems with penalty of 25=8+(8+9)
+, 24=7+(7+10)
+ and 26=8+(8+10)
+, respectively, thanks to the penalty, the second participant gets the first place, and Rudolf gets the second.
+
+
+Que 5.
+E. Number of Pairs
+time limit per test2 seconds
+memory limit per test256 megabytes
+You are given an array a
+ of n
+ integers. Find the number of pairs (i,j)
+ (1≤i<j≤n
+) where the sum of ai+aj
+ is greater than or equal to l
+ and less than or equal to r
+ (that is, l≤ai+aj≤r
+).
+
+For example, if n=3
+, a=[5,1,2]
+, l=4
+ and r=7
+, then two pairs are suitable:
+
+i=1
+ and j=2
+ (4≤5+1≤7
+);
+i=1
+ and j=3
+ (4≤5+2≤7
+).
+Input
+The first line contains an integer t
+ (1≤t≤104
+). Then t
+ test cases follow.
+
+The first line of each test case contains three integers n,l,r
+ (1≤n≤2⋅105
+, 1≤l≤r≤109
+) — the length of the array and the limits on the sum in the pair.
+
+The second line contains n
+ integers a1,a2,…,an
+ (1≤ai≤109
+).
+
+It is guaranteed that the sum of n
+ overall test cases does not exceed 2⋅105
+.
+
+Output
+For each test case, output a single integer — the number of index pairs (i,j)
+ (i<j
+), such that l≤ai+aj≤r
+.
+
+Example
+InputCopy
+4
+3 4 7
+5 1 2
+5 5 8
+5 1 2 4 3
+4 100 1000
+1 1 1 1
+5 9 13
+2 5 5 1 1
+OutputCopy
+2
+7
+0
+1
+
+Que 6.
+F. Block Sequence
+time limit per test2 seconds
+memory limit per test256 megabytes
+Given a sequence of integers a
+ of length n
+.
+
+A sequence is called beautiful if it has the form of a series of blocks, each starting with its length, i.e., first comes the length of the block, and then its elements. For example, the sequences [3, 3, 4, 5, 2, 6, 1
+] and [1, 8, 4, 5, 2, 6, 1
+] are beautiful (different blocks are colored differently), while [1
+], [1, 4, 3
+], [3, 2, 1
+] are not.
+
+In one operation, you can remove any element from the sequence. What is the minimum number of operations required to make the given sequence beautiful?
+
+Input
+The first line of the input contains a single integer t
+ (1≤t≤104
+) — the number of test cases. Then follows the descriptions of the test cases.
+
+The first line of each test case contains a single integer n
+ (1≤n≤2⋅105
+) — the length of the sequence a
+.
+
+The second line of each test case contains n
+ integers a1,a2,…,an
+ (1≤ai≤106
+) — the elements of the sequence a
+.
+
+It is guaranteed that the sum of the values of n
+ over all test cases does not exceed 2⋅105
+.
+
+Output
+For each test case, output a single number — the minimum number of deletions required to make the sequence a
+ beautiful.
+
+Example
+InputCopy
+7
+7
+3 3 4 5 2 6 1
+4
+5 6 3 2
+6
+3 4 1 6 7 7
+3
+1 4 3
+5
+1 2 3 4 5
+5
+1 2 3 1 2
+5
+4 5 5 1 5
+OutputCopy
+0
+4
+1
+1
+2
+1
+0
+Note
+In the first test case of the example, the given sequence is already beautiful, as shown in the statement.
+
+In the second test case of the example, the sequence can only be made beautiful by removing all elements from it.
+
+In the fifth test case of the example, the sequence can be made beautiful by removing the first and last elements. Then the sequence will become [2, 3, 4
+].
+
+
