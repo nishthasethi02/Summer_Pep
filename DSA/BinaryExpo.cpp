@@ -1,3 +1,4 @@
+// Binary Exponentiation
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,10 +7,10 @@ int bin(int a, int b){
 
     int ans = bin(a, b / 2);
     if(b % 2 == 0){
-        ans *= ans;
+        ans *= ans; //  (ans = (ans * ans) % mod);
     }
     else{
-        ans = a * ans * ans;
+        ans = a * ans * ans; // (ans = (a * ans * ans) % mod);
     }
     return ans;
 }
