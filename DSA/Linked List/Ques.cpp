@@ -1,7 +1,6 @@
 // Reverse the linked list
 #include <bits/stdc++.h>
 using namespace std;
-
 class Node {
 public:
     int data;
@@ -36,7 +35,7 @@ int main(){
 
     head = reverseList(head);
     Node* current = head;
-    
+
     cout << "Reversed List: ";
     current = head;
     while (current != NULL) {
