@@ -53,8 +53,7 @@ public:
 
 */
 
-/*
-https://leetcode.com/problems/first-unique-character-in-a-string/description/
+/* https://leetcode.com/problems/first-unique-character-in-a-string/description/
 
 class Solution {
 public:
@@ -76,8 +75,7 @@ public:
 
 */
 
-/*
-https://leetcode.com/problems/ransom-note/description/
+/* https://leetcode.com/problems/ransom-note/description/
 
 class Solution {
 public:
