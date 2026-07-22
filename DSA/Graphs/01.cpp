@@ -55,3 +55,7 @@ int main(){
         cout << "Parent of node " << i << " is " << parent[i] << endl;
     }
 }
+
+// https://cses.fi/problemset/task/1667
+
+// https://cses.fi/problemset/task/1666/
