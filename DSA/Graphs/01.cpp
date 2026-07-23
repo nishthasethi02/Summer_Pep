@@ -59,3 +59,9 @@ int main(){
 // https://cses.fi/problemset/task/1667
 
 // https://cses.fi/problemset/task/1666/
+
+// https://codeforces.com/problemset/problem/1829/F
+
+// https://codeforces.com/problemset/problem/977/E
+
+// https://codeforces.com/problemset/problem/580/C
